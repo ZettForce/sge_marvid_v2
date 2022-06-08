@@ -14,8 +14,8 @@ return [
     |
     */
 
-    'title' => 'AdminLTE 3',
-    'title_prefix' => '',
+    'title' => '',
+    'title_prefix' => 'CEM',
     'title_postfix' => '',
 
     /*
@@ -30,7 +30,7 @@ return [
     |
     */
 
-    'use_ico_only' => false,
+    'use_ico_only' => true,
     'use_full_favicon' => false,
 
     /*
@@ -45,12 +45,10 @@ return [
     |
     */
 
-    'logo' => '<b>Admin</b>LTE',
-    'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
-    'logo_img_class' => 'brand-image img-circle elevation-3',
+    'logo' => '<b>MARVID</b> |CEM',
+    'logo_img' => 'storage/images/logos/logo-1.jpg',
     'logo_img_xl' => null,
-    'logo_img_xl_class' => 'brand-image-xs',
-    'logo_img_alt' => 'AdminLTE',
+    'logo_img_alt' => 'CEM_logo',
 
     /*
     |--------------------------------------------------------------------------
@@ -68,8 +66,8 @@ return [
     'usermenu_header' => true,
     'usermenu_header_class' => 'bg-primary',
     'usermenu_image' => true,
-    'usermenu_desc' => false,
-    'usermenu_profile_url' => false,
+    'usermenu_desc' => true,
+    'usermenu_profile_url' => true,
 
     /*
     |--------------------------------------------------------------------------
@@ -228,7 +226,7 @@ return [
         // Navbar items:
         [
             'type'         => 'navbar-search',
-            'text'         => 'search',
+            'text'         => 'Buscar...',
             'topnav_right' => true,
         ],
         [
@@ -239,7 +237,7 @@ return [
         // Sidebar items:
         [
             'type' => 'sidebar-menu-search',
-            'text' => 'search',
+            'text' => 'Buscar...',
         ],
         [
             'text' => 'blog',
@@ -253,58 +251,37 @@ return [
             'label'       => 4,
             'label_color' => 'success',
         ],
-        ['header' => 'account_settings'],
         [
-            'text' => 'profile',
+            'header' => 'ADMINISTRADOR',
+        ],
+        [
+            'text' => 'Academico',
+            'url'  => '/academico',
+            'icon' => 'fas fa-fw fa-book',
+            'icon_color' => 'red'
+        ],
+        [
+            'text' => 'Alumnos',
             'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-user',
+            'icon' => 'fas fa-fw fa-user-graduate',
+            'icon_color' => 'blue'
         ],
         [
-            'text' => 'change_password',
+            'text'    => 'Maestros',
             'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
+            'icon'    => 'fas fa-fw fas fa-chalkboard-teacher',
+            'icon_color' => 'yellow',
         ],
         [
-            'text'    => 'multilevel',
-            'icon'    => 'fas fa-fw fa-share',
-            'submenu' => [
-                [
-                    'text' => 'level_one',
-                    'url'  => '#',
-                ],
-                [
-                    'text'    => 'level_one',
-                    'url'     => '#',
-                    'submenu' => [
-                        [
-                            'text' => 'level_two',
-                            'url'  => '#',
-                        ],
-                        [
-                            'text'    => 'level_two',
-                            'url'     => '#',
-                            'submenu' => [
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                            ],
-                        ],
-                    ],
-                ],
-                [
-                    'text' => 'level_one',
-                    'url'  => '#',
-                ],
-            ],
+            'text'    => 'Usuarios',
+            'url'  => 'admin/settings',
+            'icon'    => 'fas fa-fw fas fa-theater-masks',
         ],
-        ['header' => 'labels'],
+
+        ['header' => 'MAESTROS'],
         [
-            'text'       => 'important',
+            'text'       => 'Academico',
+            'icon'       => 'fas fa-fw fa-file',
             'icon_color' => 'red',
             'url'        => '#',
         ],
@@ -391,7 +368,7 @@ return [
             ],
         ],
         'Chartjs' => [
-            'active' => false,
+            'active' => true,
             'files' => [
                 [
                     'type' => 'js',
@@ -401,7 +378,7 @@ return [
             ],
         ],
         'Sweetalert2' => [
-            'active' => false,
+            'active' => true,
             'files' => [
                 [
                     'type' => 'js',

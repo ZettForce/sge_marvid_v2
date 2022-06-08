@@ -10,6 +10,13 @@ use Laravel\Sanctum\HasApiTokens;
 
 class User extends Authenticatable
 {
+    public function adminlte_desc(){
+        return 'Hola';
+
+    }
+    public function adminlte_profile_url(){
+        return 'Perfil';
+    }
     public function adminlte_image(){
         return 'https://upload.wikimedia.org/wikipedia/commons/e/ea/Logo_Grupo_Imagen_Multimedia.2016.png';
     }
