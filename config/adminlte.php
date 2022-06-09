@@ -186,13 +186,13 @@ return [
     */
 
     'use_route_url' => false,
-    'dashboard_url' => 'home',
+    'dashboard_url' => 'inicio',
     'logout_url' => 'logout',
     'login_url' => 'login',
     'register_url' => 'register',
     'password_reset_url' => 'password/reset',
     'password_email_url' => 'password/email',
-    'profile_url' => false,
+    'profile_url' => true,
 
     /*
     |--------------------------------------------------------------------------
@@ -245,11 +245,9 @@ return [
             'can'  => 'manage-blog',
         ],
         [
-            'text'        => 'pages',
-            'url'         => 'admin/pages',
-            'icon'        => 'far fa-fw fa-file',
-            'label'       => 4,
-            'label_color' => 'success',
+            'text'        => 'Inicio',
+            'url'         => '/inicio',
+            'icon'        => 'far fa-fw fas fa-home',
         ],
         [
             'header' => 'ADMINISTRADOR',
@@ -262,19 +260,27 @@ return [
         ],
         [
             'text' => 'Alumnos',
-            'url'  => 'admin/settings',
+            'url'  => '/alumnos',
             'icon' => 'fas fa-fw fa-user-graduate',
-            'icon_color' => 'blue'
+            'icon_color' => 'blue',
+            'submenu' => [
+                [
+                    'text' => 'Nuevo',
+                    'url' =>  '/alumnos/crear',
+                    'icon' => 'fas fa-fw fa-plus'
+                ]
+
+            ],
         ],
         [
             'text'    => 'Maestros',
-            'url'  => 'admin/settings',
+            'url'  => '/maestros',
             'icon'    => 'fas fa-fw fas fa-chalkboard-teacher',
             'icon_color' => 'yellow',
         ],
         [
             'text'    => 'Usuarios',
-            'url'  => 'admin/settings',
+            'url'  => '/usuarios',
             'icon'    => 'fas fa-fw fas fa-theater-masks',
         ],
 
