@@ -46,7 +46,7 @@ return [
     */
 
     'logo' => '<b>MARVID</b> |CEM',
-    'logo_img' => 'storage/images/logos/logo-1.jpg',
+    'logo_img' => 'storage/images/logos/logo_marvid-2.jpg',
     'logo_img_xl' => null,
     'logo_img_alt' => 'CEM_logo',
 
@@ -232,10 +232,6 @@ return [
         [
             'type'         => 'fullscreen-widget',
             'topnav_right' => true,
-        ],
-        [
-            'text' => 'Inicio',
-            'url'=> '/'
         ],
 
         // Sidebar items:
