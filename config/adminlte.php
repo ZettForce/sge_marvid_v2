@@ -265,6 +265,11 @@ return [
             'icon_color' => 'blue',
             'submenu' => [
                 [
+                    'text' => 'Inicio',
+                    'url' =>  '/alumnos',
+                    'icon' => 'fas fa-fw fa-circle'
+                ],
+                [
                     'text' => 'Nuevo',
                     'url' =>  '/alumnos/crear',
                     'icon' => 'fas fa-fw fa-plus'
