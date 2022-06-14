@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Livewire\Admin\Alumnos\Crear;
+use App\Http\Livewire\Admin\Alumnos\IndexAlumnos as AlumnosIndexAlumnos;
 use App\Http\Livewire\Admin\IndexAcademico;
 use App\Http\Livewire\Admin\IndexAlumnos;
 use App\Http\Livewire\Admin\IndexMaestros;
@@ -29,7 +30,7 @@ Route::group(['middleware' => 'auth'],function(){
     Route::get('/inicio',IndexHome::class)->name('index.home');
     Route::get('/academico', IndexAcademico::class)->name('academico.index');
     /* ruta admin de alumnos */
-    Route::get('/alumnos',IndexAlumnos::class)->name('alumnos.index');
+    Route::get('/alumnos',AlumnosIndexAlumnos::class)->name('alumnos.index');
     Route::get('/alumnos/crear',Crear::class)->name('alumnos.crear');
     /* ruta admin de maestros */
     Route::get('/maestros',IndexMaestros::class)->name('maestros.index');
