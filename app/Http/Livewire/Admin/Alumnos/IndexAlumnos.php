@@ -22,4 +22,13 @@ class IndexAlumnos extends Component
 
         return view('livewire.admin.alumnos.index-alumnos', compact('alumnos'));
     }
+
+    public function cargando()
+    {
+        $this->cargando = true;
+    }
+    public function updatingSearch()
+    {
+        $this->resetPage();
+    }
 }

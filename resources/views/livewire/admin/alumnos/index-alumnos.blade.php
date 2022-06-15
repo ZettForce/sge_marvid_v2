@@ -13,57 +13,55 @@
         </div>
 
     </div>
-
     @if (count($alumnos) > 0)
-        <table class="table table-striped">
-            <thead>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Matricula</th>
+                <th colspan="1" style="text-align:center">Nombre del alumno</th>
+                <th>Domicilio</th>
+                <th>Colonia</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach ($alumnos as $alumno)
                 <tr>
-                    <th>Matricula</th>
-                    <th colspan="1" style="text-align:center">Nombre del alumno</th>
-                    <th>Domicilio</th>
-                    <th>Colonia</th>
-                    <th>Acciones</th>
+                    <td> {{ $alumno->matricula }}</td>
+                    <td>
+                     {{ $alumno->apellidoPaterno }}
+                     {{ $alumno->apellidoMaterno }}
+                     {{ $alumno->primerNombre }}
+                     {{ $alumno->segundoNombre }}
+                    </td>
+                    <td> {{ $alumno->domicilio }}</td>
+                    <td> {{ $alumno->colonia }}</td>
+
+                    {{-- <th>
+                        <img style="width: 40px;height:40px" class="rounded-circle"
+                            src="{{ Storage::disk('public')->url($alumno->foto ? $alumno->foto : 'images/alumnos/default.png') }}"
+                            alt="">
+                    </th> --}}
+                    <td>
+                        <a  href="{{ route('alumnos.mostrar', $alumno) }}"  title="Ver más"
+                            class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                        <a {{-- href="{{ route('editar.alumnos', $alumno) }}" --}} title="Editar"
+                            class="btn btn-primary btn-sm"><i class="fa fa-pencil" aria-hidden="true"></i></i></a>
+                    </td>
                 </tr>
-            </thead>
-            <tbody>
-                @foreach ($alumnos as $alumno)
-                    <tr>
-                        <td> {{ $alumno->matricula }}</td>
-                        <td>
-                         {{ $alumno->apellidoPaterno }}
-                         {{ $alumno->apellidoMaterno }}
-                         {{ $alumno->primerNombre }}
-                         {{ $alumno->segundoNombre }}
-                        </td>
-                        <td> {{ $alumno->domicilio }}</td>
-                        <td> {{ $alumno->colonia }}</td>
 
-                        {{-- <th>
-                            <img style="width: 40px;height:40px" class="rounded-circle"
-                                src="{{ Storage::disk('public')->url($alumno->foto ? $alumno->foto : 'images/alumnos/default.png') }}"
-                                alt="">
-                        </th> --}}
-                        <td>
-                            <a {{-- href="{{ route('mostrar.alumnos', $alumno) }}" --}} title="Ver más"
-                                class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i></a>
-                            <a {{-- href="{{ route('editar.alumnos', $alumno) }}" --}} title="Editar"
-                                class="btn btn-primary btn-sm"><i class="fa fa-pencil" aria-hidden="true"></i></i></a>
-                            <a {{-- href="{{ route('borrar.alumnos', $alumno) }}" --}} title="Eliminar"
-                                class="btn btn-danger btn-sm"><i class="fa fa-trash" aria-hidden="true"></i></a>
-                        </td>
-                    </tr>
+            @endforeach
 
-                @endforeach
+        </tbody>
+    </table>
 
-            </tbody>
-        </table>
+@else
+     <img class="mx-auto d-block" style="width: 250px; height: 250px"
+        src="{{ Storage::disk('public')->url('images/otros/cargando.gif') }}" alt="cargando">
+@endif
 
-    @else
-        <img class="mx-auto d-block" style="width: 250px; height: 250px"
-            src="{{ Storage::disk('public')->url('images/otros/cargando.gif') }}" alt="cargando">
-    @endif
 
-    {{-- </div> --}}
+
 
 
     {{ $cargando == true ? $alumnos->links() : null }}

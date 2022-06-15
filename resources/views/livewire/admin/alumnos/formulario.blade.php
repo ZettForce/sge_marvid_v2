@@ -91,7 +91,7 @@
             <div class="form-group col-md-3">
                 <label>Nacionalidad *</label>
                 <select wire:model.defer="alumno.nacionalidad" class="form-control">
-                    <option selected>México</option>
+                    <option selected>Mexico</option>
                     <option>Estados Unidos</option>
                     <option>Guatemala</option>
                     <option>Venezuela</option>
@@ -105,7 +105,7 @@
         </div>
         <br>
         <br>
-        <div class="card-header" style="text-align: center;color:white;background-color:#800000">
+        <div class="card-header" style="text-align: center;color:white;background-color:#701630">
             Datos de escuela de procedencia
         </div>
         <br>
@@ -136,7 +136,7 @@
         </div>
         <br>
         <br>
-        <div class="card-header" style="text-align: center;color:white;background-color:#800000">
+        <div class="card-header" style="text-align: center;color:white;background-color:#701630">
             Información Medica
         </div>
         <br>
@@ -174,7 +174,7 @@
         </div>
         <br>
         <br>
-        <div class="card-header" style="text-align: center;color:white;background-color:#800000">
+        <div class="card-header" style="text-align: center;color:white;background-color:#701630">
             Datos del Tutor
         </div>
         <br>
