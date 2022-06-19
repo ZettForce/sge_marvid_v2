@@ -46,7 +46,7 @@ return [
     */
 
     'logo' => '<b>MARVID</b> |CEM',
-    'logo_img' => 'storage/images/logos/logo-1.jpg',
+    'logo_img' => 'storage/images/logos/logo_marvid-2.jpg',
     'logo_img_xl' => null,
     'logo_img_alt' => 'CEM_logo',
 
@@ -233,10 +233,6 @@ return [
             'type'         => 'fullscreen-widget',
             'topnav_right' => true,
         ],
-        [
-            'text' => 'Inicio',
-            'url'=> '/'
-        ],
 
         // Sidebar items:
         [
@@ -269,7 +265,12 @@ return [
             'icon_color' => 'blue',
             'submenu' => [
                 [
-                    'text' => 'Nuevo',
+                    'text' => 'Alumnos Inscritos',
+                    'url' =>  '/alumnos',
+                    'icon' => 'fas fa-fw fa-circle'
+                ],
+                [
+                    'text' => 'Agregar Alumno',
                     'url' =>  '/alumnos/crear',
                     'icon' => 'fas fa-fw fa-plus'
                 ]
@@ -281,11 +282,36 @@ return [
             'url'  => '/maestros',
             'icon'    => 'fas fa-fw fas fa-chalkboard-teacher',
             'icon_color' => 'yellow',
+            'submenu' => [
+                [
+                    'text' => 'Lista de maestros',
+                    'url' =>  '/maestros',
+                    'icon' => 'fas fa-fw fa-list'
+                ],
+                [
+                    'text' => 'Agregar maestro',
+                    'url' =>  '/maestros/crear',
+                    'icon' => 'fas fa-fw fa-plus-circle',
+                ],
+            ],
         ],
         [
             'text'    => 'Usuarios',
-            'url'  => '/usuarios',
+            'url'  => '#',
             'icon'    => 'fas fa-fw fas fa-theater-masks',
+            'icon_color' => 'info',
+            'submenu' => [
+                [
+                    'text' => 'Lista de usuarios',
+                    'url' =>  '/usuarios',
+                    'icon' => 'fas fa-fw fa-list'
+                ],
+                [
+                    'text' => 'Agregar usuario',
+                    'url' =>  '/usuarios/crear',
+                    'icon' => 'fas fa-fw fa-plus-circle',
+                ],
+            ],
         ],
 
         ['header' => 'MAESTROS'],
