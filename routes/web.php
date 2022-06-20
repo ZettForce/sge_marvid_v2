@@ -13,6 +13,8 @@ use App\Http\Livewire\Admin\IndexUsuarios;
 use App\Http\Livewire\Admin\Maestros\MaestrosIndex;
 use App\Http\Livewire\IndexHome;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\UserController;
+use App\Http\Livewire\Admin\Usuarios\UsuariosIndex;
 
 /*
 |--------------------------------------------------------------------------
@@ -43,5 +45,7 @@ Route::group(['middleware' => 'auth'],function(){
     Route::get('alumnos/{alumno}/mostrar',Mostrar::class)->name('alumnos.mostrar');
     /* ruta admin de maestros */
     Route::get('/maestros',MaestrosIndex::class)->name('maestros.index');
+
+    Route::get('/usuarios', UsuariosIndex::class)->name('usuarios.index');
 
 });

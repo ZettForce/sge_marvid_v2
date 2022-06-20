@@ -285,7 +285,7 @@ return [
         ],
         [
             'text'    => 'Usuarios',
-            'url'  => '#',
+            'url'  => '/usuarios',
             'icon'    => 'fas fa-fw fas fa-theater-masks',
         ],
 

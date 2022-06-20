@@ -1,9 +1,7 @@
 <div>
     <div>
         <h3>Academico</h3>
-        aqui esta tu respuesta carnal
         <div class="card-body">
-            <p>Application Buttons with Custom Colors</p>
             <a class="btn btn-app bg-secondary btn-lg">
                 <i class="fas fa-barcode"></i> Ciclo
             </a>

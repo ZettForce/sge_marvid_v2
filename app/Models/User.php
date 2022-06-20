@@ -6,10 +6,15 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 use Laravel\Sanctum\HasApiTokens;
+
+use Spatie\Permission\Traits\HasRoles;
 
 class User extends Authenticatable
 {
+
     public function adminlte_desc(){
         return 'Hola';
 
@@ -18,15 +23,16 @@ class User extends Authenticatable
         return 'Perfil';
     }
     public function adminlte_image(){
-        return 'https://upload.wikimedia.org/wikipedia/commons/e/ea/Logo_Grupo_Imagen_Multimedia.2016.png';
+        return auth()->user()->profile_photo_url;
     }
-    use HasApiTokens, HasFactory, Notifiable;
+    use HasApiTokens, HasFactory, Notifiable, HasRoles;
 
     /**
      * The attributes that are mass assignable.
      *
      * @var array<int, string>
      */
+
     protected $fillable = [
         'name',
         'email',
