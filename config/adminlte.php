@@ -256,7 +256,15 @@ return [
             'text' => 'Academico',
             'url'  => '/academico',
             'icon' => 'fas fa-fw fa-book',
-            'icon_color' => 'red'
+            'icon_color' => 'red',
+            /* 'submenu' => [
+                [
+                    'text' => 'Inicio',
+                    'url' =>  '/ciclo/index',
+                    'icon' => 'fas fa-fw fa-circle'
+                ],
+
+            ], */
         ],
         [
             'text' => 'Alumnos',

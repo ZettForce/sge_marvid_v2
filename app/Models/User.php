@@ -23,7 +23,7 @@ class User extends Authenticatable
         return 'Perfil';
     }
     public function adminlte_image(){
-        return auth()->user()->profile_photo_url;
+        return 'https://picsum.photos/300/300';
     }
     use HasApiTokens, HasFactory, Notifiable, HasRoles;
 

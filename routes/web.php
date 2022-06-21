@@ -14,6 +14,7 @@ use App\Http\Livewire\Admin\Maestros\MaestrosIndex;
 use App\Http\Livewire\IndexHome;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\UserController;
+use App\Http\Livewire\Admin\Academico\Ciclo\CicloIndex;
 use App\Http\Livewire\Admin\Usuarios\UsuariosIndex;
 
 /*
@@ -37,6 +38,8 @@ Route::group(['middleware' => 'auth'],function(){
     Route::get('/inicio',IndexHome::class)->name('index.home');
      /* ruta admin de academico */
     Route::get('/academico',AcademicoIndex::class)->name('academico.index');
+    /* ciclo */
+    Route::get('/ciclo/index',CicloIndex::class)->name('ciclo.index');
     Route::get('/asignatura',AsignaturasIndex::class)->name('asignatura.index');
     Route::get('/asignatura/crear',AsignaturasCrear::class)->name('asignatura.crear');
     /* ruta admin de alumnos */
