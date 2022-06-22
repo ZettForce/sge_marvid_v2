@@ -46,7 +46,7 @@ return [
     */
 
     'logo' => '<b>MARVID</b> |CEM',
-    'logo_img' => 'storage/images/logos/logo-1.jpg',
+    'logo_img' => 'storage/images/logos/logo_marvid-2.jpg',
     'logo_img_xl' => null,
     'logo_img_alt' => 'CEM_logo',
 
@@ -233,10 +233,6 @@ return [
             'type'         => 'fullscreen-widget',
             'topnav_right' => true,
         ],
-        [
-            'text' => 'Inicio',
-            'url'=> '/'
-        ],
 
         // Sidebar items:
         [
@@ -260,7 +256,15 @@ return [
             'text' => 'Academico',
             'url'  => '/academico',
             'icon' => 'fas fa-fw fa-book',
-            'icon_color' => 'red'
+            'icon_color' => 'red',
+            /* 'submenu' => [
+                [
+                    'text' => 'Inicio',
+                    'url' =>  '/ciclo/index',
+                    'icon' => 'fas fa-fw fa-circle'
+                ],
+
+            ], */
         ],
         [
             'text' => 'Alumnos',
@@ -268,6 +272,11 @@ return [
             'icon' => 'fas fa-fw fa-user-graduate',
             'icon_color' => 'blue',
             'submenu' => [
+                [
+                    'text' => 'Inicio',
+                    'url' =>  '/alumnos',
+                    'icon' => 'fas fa-fw fa-circle'
+                ],
                 [
                     'text' => 'Nuevo',
                     'url' =>  '/alumnos/crear',
@@ -293,7 +302,7 @@ return [
             'text'       => 'Academico',
             'icon'       => 'fas fa-fw fa-file',
             'icon_color' => 'red',
-            'url'        => '#',
+            'route'        => 'maestros.calificaciones.index',
         ],
         [
             'text'       => 'warning',
