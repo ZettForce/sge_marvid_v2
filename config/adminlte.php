@@ -46,7 +46,7 @@ return [
     */
 
     'logo' => '<b>MARVID</b> |CEM',
-    'logo_img' => 'storage/images/logos/logo_marvid-2.jpg',
+    'logo_img' => 'storage/images/logos/logo_marvid-2.png',
     'logo_img_xl' => null,
     'logo_img_alt' => 'CEM_logo',
 
