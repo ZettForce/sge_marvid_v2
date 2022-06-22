@@ -28,7 +28,6 @@ return new class extends Migration
             $table->string('apellidoMaterno')->nullable();
             $table->string('f_nacimiento');
             $table->string('sexo');
-            $table->string('curp');
             $table->string('domicilio');
             $table->string('colonia');
             $table->string('zip')->nullable();
