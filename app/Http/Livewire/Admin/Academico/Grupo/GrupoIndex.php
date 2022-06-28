@@ -16,8 +16,8 @@ class GrupoIndex extends Component
 
     public function render()
     {
-        $grupos = Grupo::orderBy('clave_grupo','desc');
-        $grupos = ($this->cargando == true) ? Grupo::where('clave_grupo', 'LIKE', '%' . $this->search . '%')
+        $grupos = Grupo::orderBy('clave','desc');
+        $grupos = ($this->cargando == true) ? Grupo::where('clave', 'LIKE', '%' . $this->search . '%')
         ->paginate(10):[];
         return view('livewire.admin.academico.grupo.grupo-index', compact('grupos'));
     }

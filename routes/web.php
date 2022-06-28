@@ -18,6 +18,7 @@ use App\Http\Livewire\Admin\Academico\Ciclo\CicloIndex;
 use App\Http\Livewire\Admin\Academico\Grupo\GrupoCrear;
 use App\Http\Livewire\Admin\Academico\Grupo\GrupoIndex;
 use App\Http\Livewire\Admin\Usuarios\UsuariosIndex;
+use App\Http\Livewire\Maestro\MaestroIndex;
 
 /*
 |--------------------------------------------------------------------------
@@ -54,5 +55,11 @@ Route::group(['middleware' => 'auth'],function(){
     Route::get('/maestros',MaestrosIndex::class)->name('maestros.index');
 
     Route::get('/usuarios', UsuariosIndex::class)->name('usuarios.index');
+
+
+
+    /* Ruta de maestros */
+
+    Route::get('/personal',MaestroIndex::class)->name('personal.index');
 
 });

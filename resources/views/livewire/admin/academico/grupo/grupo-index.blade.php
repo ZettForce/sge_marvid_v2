@@ -25,9 +25,9 @@
             <tbody>
                 @foreach ($grupos as $grupo)
                     <tr>
-                        <td> {{ $grupo->clave_grupo }}</td>
-                        <td> {{ $grupo->descripcion_grupo }}</td>
-                        <td> {{ $grupo->identificador_grupo }}</td>
+                        <td> {{ $grupo->clave}}</td>
+                        <td> {{ $grupo->descripcion}}</td>
+                        <td> {{ $grupo->identificador}}</td>
 
                         <td>
                             <a {{-- href="{{ route('alumnos.mostrar', $alumno) }}" --}} title="Ver más" class="btn btn-info btn-sm"><i class="fa fa-eye"

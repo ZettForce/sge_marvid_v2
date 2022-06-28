@@ -302,17 +302,7 @@ return [
             'text'       => 'Academico',
             'icon'       => 'fas fa-fw fa-file',
             'icon_color' => 'red',
-            'url'        => '#',
-        ],
-        [
-            'text'       => 'warning',
-            'icon_color' => 'yellow',
-            'url'        => '#',
-        ],
-        [
-            'text'       => 'information',
-            'icon_color' => 'cyan',
-            'url'        => '#',
+            'route'        => 'personal.index',
         ],
     ],
 
