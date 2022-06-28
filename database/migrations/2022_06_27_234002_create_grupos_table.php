@@ -15,12 +15,13 @@ return new class extends Migration
     {
         Schema::create('grupos', function (Blueprint $table) {
             $table->id();
-            $table->string('clave_grupo');
-            $table->string('descripcion_grupo');
-            $table->string('grado_grupo');
-            $table->string('identificador_grupo');
-            $table->string('turno_grupo');
-            $table->string('cupo_grupo');
+            $table->string('clave');
+            $table->string('descripcion');
+            $table->string('identificador');
+            $table->string('turno');
+
+
+
             $table->timestamps();
         });
     }

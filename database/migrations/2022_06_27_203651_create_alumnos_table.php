@@ -15,7 +15,6 @@ return new class extends Migration
     {
         Schema::create('alumnos', function (Blueprint $table) {
             $table->id();
-            /* Datos control escolar */
             $table->string('matricula')->nullable();
             $table->string('observaciones')->nullable();
             $table->string('costosInscripcion')->nullable();

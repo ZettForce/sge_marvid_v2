@@ -4,7 +4,8 @@
             <div class="form-group col-md-3">
                 <label>Primer Nombre *</label>
                 <input wire:model.defer="alumno.primerNombre" type="text" class="form-control" placeholder="Jesus">
-                @error('alumno.primerNombre')<span class="text-danger">{{ $message }}</span>
+                @error('alumno.primerNombre')
+                    <span class="text-danger">{{ $message }}</span>
                 @enderror
             </div>
             <div class="form-group col-md-3">
@@ -24,14 +25,34 @@
             </div>
             <div class="form-group col-md-3">
                 <label>Apellido Materno *</label>
-                <input wire:model.defer="alumno.apellidoMaterno" type="text" class="form-control" placeholder="López">
+                <input wire:model.defer="alumno.apellidoMaterno" type="text" class="form-control"
+                    placeholder="López">
                 @error('alumno.apellidoMaterno')
                     <span class="text-danger">{{ $message }}</span>
                 @enderror
             </div>
         </div>
         <div class="form-row">
-            <div class="form-group col-md-6">
+            <div class="form-group col-md-3">
+                <label>CURP *</label>
+                <input wire:model.defer="alumno.curp" type="text" class="form-control"
+                    placeholder="MAHF890207HSRRRL01">
+                @error('alumno.curp')
+                    <span class="text-danger">{{ $message }}</span>
+                @enderror
+            </div>
+            <div class="form-group col-md-2">
+                <label>Sexo *</label>
+                <select wire:model.defer="alumno.sexo" type="text" class="form-control" placeholder="Calle y Número">
+                    <option selected>Selecciona...</option>
+                    <option>Femenino</option>
+                    <option>Masculino</option>
+                </select>
+                @error('alumno.sexo')
+                    <span class="text-danger">{{ $message }}</span>
+                @enderror
+            </div>
+            <div class="form-group col-md-3">
                 <label>Domicilio *</label>
                 <input wire:model.defer="alumno.domicilio" type="text" class="form-control"
                     placeholder="Calle y Número">
@@ -39,22 +60,65 @@
                     <span class="text-danger">{{ $message }}</span>
                 @enderror
             </div>
-            <div class="form-group col-md-4">
+            <div class="form-group col-md-3">
                 <label>Colonia *</label>
                 <select wire:model.defer="alumno.colonia" class="form-control">
                     <option selected>Selecciona...</option>
+                    <option>10 de Abril</option>
+                    <option>Aeropuerto</option>
+                    <option>Alameda</option>
+                    <option>Altar</option>
+                    <option>Aviación</option>
+                    <option>Bellavista</option>
+                    <option>Burócrata</option>
                     <option>Campamento</option>
                     <option>Campestre</option>
+                    <option>Chula Vista 2 del Parque</option>
                     <option>Chula Vista I</option>
+                    <option>Chula Vista II</option>
+                    <option>Chula Vista III</option>
+                    <option>Comercial</option>
+                    <option>Cuauhtémoc</option>
                     <option>Del Bosque</option>
+                    <option>Del Parque</option>
+                    <option>Del Río</option>
+                    <option>Diana Residencial</option>
+                    <option>Federal</option>
+                    <option>Industrial</option>
+                    <option>Jalisco</option>
+                    <option>Joyas del Parque</option>
                     <option>La Grullita</option>
+                    <option>La Mesa</option>
+                    <option>La Mesa</option>
+                    <option>Las Palmas</option>
+                    <option>Libertad</option>
+                    <option>Los Adobes</option>
+                    <option>Los Portales</option>
+                    <option>México</option>
+                    <option>Mezquite</option>
+                    <option>Misión Del Sol</option>
+                    <option>Nuevo Palmira</option>
+                    <option>Nuevo San Luis</option>
+                    <option>Oasis</option>
+                    <option>Paraiso del Bosque</option>
+                    <option>Parque Industrial</option>
+                    <option>Progreso</option>
+                    <option>Reforma</option>
+                    <option>Residencias</option>
+                    <option>Ruiz Cortines</option>
+                    <option>Solidaridad</option>
+                    <option>Sonora</option>
+                    <option>Villa Colonial</option>
+                    <option>Villa Las Flores</option>
+                    <option>Villas del Río</option>
+
                 </select>
                 @error('alumno.colonia')
                     <span class="text-danger">{{ $message }}</span>
                 @enderror
             </div>
-            <div class="form-group col-md-2">
-                <label>Código Postal</label>
+            <div class="form-group col-md-1">
+                <label>C.P</label>
                 <input wire:model.defer="alumno.zip" type="text" class="form-control">
                 @error('alumno.zip')
                     <span class="text-danger">{{ $message }}</span>
@@ -72,7 +136,8 @@
             </div>
             <div class="form-group col-md-3">
                 <label>Télefono Casa </label>
-                <input wire:model.defer="alumno.t-casa" type="text" class="form-control" placeholder="(653) 123 1234">
+                <input wire:model.defer="alumno.t-casa" type="text" class="form-control"
+                    placeholder="(653) 123 1234">
                 @error('alumno.t-casa')
                     <span class="text-danger">{{ $message }}</span>
                 @enderror
@@ -80,8 +145,8 @@
             <div class="form-group col-md-3">
                 <label>* Fecha Nacimiento <i class="fas fa-calendar input-prefix"></i> </label>
                 <div id="date-picker-example" class="md-form md-outline input-with-post-icon datepicker" inline="true">
-                    <input wire:model.defer="alumno.f_nacimiento" placeholder="Select date" type="text" id="example"
-                        class="form-control">
+                    <input wire:model.defer="alumno.f_nacimiento" placeholder="Select date" type="text"
+                        id="example" class="form-control">
                     @error('alumno.f_nacimiento')
                         <span class="text-danger">{{ $message }}</span>
                     @enderror
@@ -91,7 +156,8 @@
             <div class="form-group col-md-3">
                 <label>Nacionalidad *</label>
                 <select wire:model.defer="alumno.nacionalidad" class="form-control">
-                    <option selected>Mexico</option>
+                    <option selected>Selecciona...</option>
+                    <option>México</option>
                     <option>Estados Unidos</option>
                     <option>Guatemala</option>
                     <option>Venezuela</option>
@@ -120,8 +186,7 @@
             </div>
             <div class="form-group col-md-4">
                 <label>Estado</label>
-                <input wire:model.defer="alumno.proce_estado" type="text" class="form-control"
-                    placeholder="Estado">
+                <input wire:model.defer="alumno.proce_estado" type="text" class="form-control" placeholder="Estado">
                 @error('alumno.proce_estado')
                     <span class="text-danger">{{ $message }}</span>
                 @enderror
@@ -143,7 +208,8 @@
         <div class="form-row">
             <div class="form-group col-md-5">
                 <label>Enfermedades o Alergias *</label>
-                <input wire:model.defer="alumno.enfermedades" type="text" class="form-control" placeholder="Ninguna">
+                <input wire:model.defer="alumno.enfermedades" type="text" class="form-control"
+                    placeholder="Ninguna">
                 @error('alumno.enfermedades')
                     <span class="text-danger">{{ $message }}</span>
                 @enderror
@@ -152,7 +218,8 @@
             <div class="form-group col-md-5">
                 <label>Emergencias se ateneran *</label>
                 <select wire:model.defer="alumno.atencionMedica" class="form-control">
-                    <option selected>IMMS</option>
+                    <option selected>Selecciona...</option>
+                    <option>IMMS</option>
                     <option>ISSTE</option>
                     <option>ISSTESON</option>
                     <option>OTRO</option>
@@ -165,7 +232,17 @@
             </div>
             <div class="form-group col-md-2">
                 <label>Grupo Sanguíneo *</label>
-                <input wire:model.defer="alumno.grupoSanguineo" type="text" class="form-control" placeholder=" O+">
+                <select wire:model.defer="alumno.grupoSanguineo" type="text" class="form-control"
+                    placeholder=" O Positivo (O+)">
+                    <option selected>Selecciona...</option>
+                    <option>A positivo (A +)</option>
+                    <option>A negativo (A-)</option>
+                    <option>B positivo (B +)</option>
+                    <option>B negativo (B-)</option>
+                    <option>AB positivo (AB+)</option>
+                    <option>O positivo (O+)</option>
+                    <option>O negativo (O-)</option>
+                </select>
                 @error('alumno.grupoSanguineo')
                     <span class="text-danger">{{ $message }}</span>
                 @enderror
@@ -183,21 +260,24 @@
         <div class="form-row">
             <div class="form-group col-md-4">
                 <label>Nombre del Padre *</label>
-                <input wire:model.defer="alumno.nombrePadre" type="text" class="form-control" placeholder="Ninguna">
+                <input wire:model.defer="alumno.nombrePadre" type="text" class="form-control"
+                    placeholder="Ninguna">
                 @error('alumno.nombrePadre')
                     <span class="text-danger">{{ $message }}</span>
                 @enderror
             </div>
             <div class="form-group col-md-4">
                 <label>Nombre de la Madre *</label>
-                <input wire:model.defer="alumno.nombreMadre" type="text" class="form-control" placeholder="Ninguna">
+                <input wire:model.defer="alumno.nombreMadre" type="text" class="form-control"
+                    placeholder="Ninguna">
                 @error('alumno.nombreMadre')
                     <span class="text-danger">{{ $message }}</span>
                 @enderror
             </div>
             <div class="form-group col-md-4">
                 <label>Nombre del Tutor </label>
-                <input wire:model.defer="alumno.nombreTutor" type="text" class="form-control" placeholder="Ninguna">
+                <input wire:model.defer="alumno.nombreTutor" type="text" class="form-control"
+                    placeholder="Ninguna">
                 @error('alumno.nombreTutor')
                     <span class="text-danger">{{ $message }}</span>
                 @enderror
@@ -206,7 +286,8 @@
         <div class="form-row">
             <div class="form-group col-md-4">
                 <label>Dirección *</label>
-                <input wire:model.defer="alumno.direccion" type="text" class="form-control" placeholder="Ninguna">
+                <input wire:model.defer="alumno.direccion" type="text" class="form-control"
+                    placeholder="Ninguna">
                 @error('alumno.direccion')
                     <span class="text-danger">{{ $message }}</span>
                 @enderror
@@ -214,7 +295,8 @@
             </div>
             <div class="form-group col-md-4">
                 <label>Tel de Trabajo</label>
-                <input wire:model.defer="alumno.tutor_tel_trabajo" type="text" class="form-control" placeholder="Ninguna">
+                <input wire:model.defer="alumno.tutor_tel_trabajo" type="text" class="form-control"
+                    placeholder="Ninguna">
                 @error('alumno.tutor_tel_trabajo')
                     <span class="text-danger">{{ $message }}</span>
                 @enderror
@@ -222,7 +304,8 @@
             </div>
             <div class="form-group col-md-4">
                 <label>Tel Celular *</label>
-                <input wire:model.defer="alumno.tutor_tel_celular" type="text" class="form-control" placeholder="Ninguna">
+                <input wire:model.defer="alumno.tutor_tel_celular" type="text" class="form-control"
+                    placeholder="Ninguna">
                 @error('alumno.tutor_tel_celular')
                     <span class="text-danger">{{ $message }}</span>
                 @enderror

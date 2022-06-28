@@ -15,6 +15,8 @@ class RulesAlumnos{
             'alumno.apellidoPaterno' => 'required|string',
             'alumno.apellidoMaterno' => 'nullable|string',
             'alumno.f_nacimiento' => 'required|string',
+            'alumno.curp' => 'required |string',
+            'alumno.sexo' => 'required | string',
             'alumno.domicilio' => 'required|string',
             'alumno.colonia' => 'required|string',
             'alumno.zip' => 'nullable|string',
