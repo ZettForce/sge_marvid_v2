@@ -10,7 +10,7 @@
         <div class="row">
             <div class="col-sm-4">
                 <h3>{{ $alumno->matricula }}</h3>
-                {{-- <h5>{{$alumno->apellidoPaterno}} {{$alumno->apellidoMaterno}}</h5> --}}
+                {{-- <h6>{{$alumno->apellidoPaterno}} {{$alumno->apellidoMaterno}}</h6> --}}
                 <div class="fakeimg"><img class="card-img-top" {{-- width="80px" height="220px" --}}
                         src="{{ Storage::disk('public')->url($alumno->foto ? $alumno->foto : 'images/otros/alumnos/defaultStudent.png') }}"
                         alt="Card image cap"></div>
@@ -20,12 +20,15 @@
             <div class="col-sm-8">
                 <h2>{{ $alumno->primerNombre }} {{ $alumno->segundoNombre }} {{ $alumno->apellidoPaterno }}
                     {{ $alumno->apellidoMaterno }}</h2>
-                <h5>Title description, Dec 7, 2020</h5>
-                <div class="fakeimg">Fake Image</div>
-                <p>Some text..</p>
-                <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                    exercitation ullamco.</p>
+                <label>Fecha de nacimiento: </label><h6>{{$alumno->f_nacimiento}}</h6>
+                <label>Nacionalidad: </label><h6>{{$alumno->nacionalidad}}</h6>
+                <label>Sexo: </label><h6>{{$alumno->sexo}}</h6>
+                <label>CURP: </label><h6>{{$alumno->curp}}</h6>
+                <label>Domicilio: </label><h6>{{$alumno->domicilio}}, Col. {{$alumno->colonia}}, C.P {{$alumno->zip}}</h6>
+                <label>Teléfono Celular: </label><h6>{{$alumno->t_celular}}</h6>
+                <label>Teléfono Casa: </label><h6>{{$alumno->t_casa}}</h6>
+
+
 
             </div>
         </div>

@@ -15,10 +15,13 @@ return new class extends Migration
     {
         Schema::create('grupos', function (Blueprint $table) {
             $table->id();
-            $table->string('clave');
-            $table->string('descripcion');
-            $table->string('identificador');
+            $table->string('clave')->nullable();
+            $table->string('descripcion')->nullable();
+            $table->string('identificador')->nullable();
             $table->string('turno');
+
+
+
 
 
 

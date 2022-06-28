@@ -32,7 +32,7 @@ return new class extends Migration
             $table->string('colonia');
             $table->string('zip')->nullable();
             $table->string('t_celular',10);
-            $table->string('t-casa',10)->nullable();
+            $table->string('t_casa',10)->nullable();
             $table->string('nacionalidad');
             /* Secundaria de procedencia */
             $table->string('proce_secundaria')->nullable();

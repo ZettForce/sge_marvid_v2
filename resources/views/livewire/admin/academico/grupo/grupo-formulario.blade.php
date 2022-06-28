@@ -9,20 +9,29 @@
             <div class="form-row">
                 <div class="form-group col-md-4">
                     <label>Clave</label>
-                    <input type="text" class="form-control">
+                    <input wire:model.defer="grupo.clave" type="text" class="form-control">
+                    @error('grupo.clave')
+                        <span class="text-danger">{{ $message }} </span>
+                    @enderror
                 </div>
                 <div class="form-group col-md-4">
                     <label>Descripción</label>
-                    <input type="text" class="form-control">
+                    <input wire:model.defer="grupo.descripcion" type="text" class="form-control">
+                    @error('grupo.descripcion')
+                        <span class="text-danger">{{ $message }} </span>
+                    @enderror
                 </div>
 
                 <div class="form-group col-md-4">
                     <label>Identificador</label>
-                    <input type="text" class="form-control">
+                    <input wire:model.defer="grupo.identificador" type="text" class="form-control">
+                    @error('grupo.identificador')
+                        <span class="text-danger">{{ $message }} </span>
+                    @enderror
                 </div>
                 <div class="form-group col-md-6">
                     <label>Grado</label>
-                    <select type="text" class="form-control">
+                    <select  type="text" class="form-control">
                         <option selected>Selecciona...</option>
                         <option>1</option>
                         <option>2</option>
@@ -34,11 +43,14 @@
                 </div>
                 <div class="form-group col-md-6">
                     <label>Grado</label>
-                    <select type="text" class="form-control">
+                    <select wire:model.defer="grupo.turno" type="text" class="form-control">
                         <option selected>Selecciona...</option>
                         <option>Matutino</option>
                         <option>Vespertino</option>
                     </select>
+                    @error('grupo.turno')
+                        <span class="text-danger">{{ $message }} </span>
+                    @enderror
                 </div>
 
             </div>

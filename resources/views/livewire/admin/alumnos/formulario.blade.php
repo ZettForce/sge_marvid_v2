@@ -36,7 +36,7 @@
             <div class="form-group col-md-3">
                 <label>CURP *</label>
                 <input wire:model.defer="alumno.curp" type="text" class="form-control"
-                    placeholder="MAHF890207HSRRRL01">
+                    placeholder="MAHF890207HSRRRL01" minlength="18" maxlength="18">
                 @error('alumno.curp')
                     <span class="text-danger">{{ $message }}</span>
                 @enderror
@@ -119,7 +119,7 @@
             </div>
             <div class="form-group col-md-1">
                 <label>C.P</label>
-                <input wire:model.defer="alumno.zip" type="text" class="form-control">
+                <input wire:model.defer="alumno.zip" type="number" class="form-control" placeholder="83499" minlength="5" maxlength="5" pattern="^[0-9]{0,12}([,][0-9]{2,2})?$" >
                 @error('alumno.zip')
                     <span class="text-danger">{{ $message }}</span>
                 @enderror
@@ -128,24 +128,24 @@
         <div class="form-row">
             <div class="form-group col-md-3">
                 <label>Télefono Celular *</label>
-                <input wire:model.defer="alumno.t_celular" type="text" class="form-control"
-                    placeholder="(653) 123 1234">
+                <input wire:model.defer="alumno.t_celular" type="number" class="form-control"
+                    placeholder="(653) 123 1234" minlength="10" maxlength="10">
                 @error('alumno.t_celular')
                     <span class="text-danger">{{ $message }}</span>
                 @enderror
             </div>
             <div class="form-group col-md-3">
                 <label>Télefono Casa </label>
-                <input wire:model.defer="alumno.t-casa" type="text" class="form-control"
-                    placeholder="(653) 123 1234">
+                <input wire:model.defer="alumno.t_casa" type="number" class="form-control"
+                    placeholder="(653) 123 1234" minlength="10" maxlength="10">
                 @error('alumno.t-casa')
                     <span class="text-danger">{{ $message }}</span>
                 @enderror
             </div>
             <div class="form-group col-md-3">
-                <label>* Fecha Nacimiento <i class="fas fa-calendar input-prefix"></i> </label>
+                <label>* Fecha Nacimiento</label>
                 <div id="date-picker-example" class="md-form md-outline input-with-post-icon datepicker" inline="true">
-                    <input wire:model.defer="alumno.f_nacimiento" placeholder="Select date" type="text"
+                    <input wire:model.defer="alumno.f_nacimiento" placeholder="Select date" type="date"
                         id="example" class="form-control">
                     @error('alumno.f_nacimiento')
                         <span class="text-danger">{{ $message }}</span>
@@ -193,7 +193,7 @@
             </div>
             <div class="form-group col-md-4">
                 <label>Promedio</label>
-                <input wire:model.defer="alumno.proce_promedio" type="text" class="form-control" placeholder="100">
+                <input wire:model.defer="alumno.proce_promedio" type="number" class="form-control" placeholder="100">
                 @error('alumno.proce_promedio')
                     <span class="text-danger">{{ $message }}</span>
                 @enderror
@@ -216,7 +216,7 @@
 
             </div>
             <div class="form-group col-md-5">
-                <label>Emergencias se ateneran *</label>
+                <label>Emergencias se atenderan en *</label>
                 <select wire:model.defer="alumno.atencionMedica" class="form-control">
                     <option selected>Selecciona...</option>
                     <option>IMMS</option>
@@ -287,7 +287,7 @@
             <div class="form-group col-md-4">
                 <label>Dirección *</label>
                 <input wire:model.defer="alumno.direccion" type="text" class="form-control"
-                    placeholder="Ninguna">
+                    placeholder="Direccion">
                 @error('alumno.direccion')
                     <span class="text-danger">{{ $message }}</span>
                 @enderror
@@ -295,8 +295,8 @@
             </div>
             <div class="form-group col-md-4">
                 <label>Tel de Trabajo</label>
-                <input wire:model.defer="alumno.tutor_tel_trabajo" type="text" class="form-control"
-                    placeholder="Ninguna">
+                <input wire:model.defer="alumno.tutor_tel_trabajo" type="number" class="form-control"
+                    placeholder="6535187931" minlength="10" maxlength="10">
                 @error('alumno.tutor_tel_trabajo')
                     <span class="text-danger">{{ $message }}</span>
                 @enderror
@@ -304,8 +304,8 @@
             </div>
             <div class="form-group col-md-4">
                 <label>Tel Celular *</label>
-                <input wire:model.defer="alumno.tutor_tel_celular" type="text" class="form-control"
-                    placeholder="Ninguna">
+                <input wire:model.defer="alumno.tutor_tel_celular" type="number" class="form-control"
+                    placeholder="6535170560" minlength="10" maxlength="10">
                 @error('alumno.tutor_tel_celular')
                     <span class="text-danger">{{ $message }}</span>
                 @enderror

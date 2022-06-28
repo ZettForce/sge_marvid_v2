@@ -1,6 +1,6 @@
 <div wire:init="cargando">
     <h4>Index Usuarios</h4>
-    <a type="button" {{-- href="{{ route('alumnos.crear') }}" --}} class="float-right mb-3 btn btn-success">Agregar <i class="fa fa-plus"
+    <a type="button" {{-- href="{{ route('alumnos.crear') }}" --}} class="float-right mb-3 btn btn-success">Nuevo Usuario <i class="fa fa-plus"
             aria-hidden="true"></i></a>
 
     <div class="mb-2 col-6">

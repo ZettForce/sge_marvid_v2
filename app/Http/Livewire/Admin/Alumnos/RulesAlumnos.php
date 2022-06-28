@@ -21,7 +21,7 @@ class RulesAlumnos{
             'alumno.colonia' => 'required|string',
             'alumno.zip' => 'nullable|string',
             'alumno.t_celular' => 'required|string',
-            'alumno.t-casa' => 'nullable|string',
+            'alumno.t_casa' => 'nullable|string',
             'alumno.nacionalidad' => 'required|string',
             'alumno.proce_secundaria' => 'nullable|string',
             'alumno.proce_estado' => 'nullable|string',
