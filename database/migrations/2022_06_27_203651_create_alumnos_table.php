@@ -51,6 +51,8 @@ return new class extends Migration
             $table->string('tutor_tel_celular',10);
 
             $table->timestamps();
+
+
         });
     }
 

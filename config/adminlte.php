@@ -88,6 +88,8 @@ return [
     'layout_fixed_footer' => null,
     'layout_dark_mode' => null,
 
+
+
     /*
     |--------------------------------------------------------------------------
     | Authentication Views Classes
@@ -210,6 +212,7 @@ return [
     'laravel_mix_css_path' => 'css/app.css',
     'laravel_mix_js_path' => 'js/app.js',
 
+
     /*
     |--------------------------------------------------------------------------
     | Menu Items
@@ -233,6 +236,7 @@ return [
             'type'         => 'fullscreen-widget',
             'topnav_right' => true,
         ],
+
 
         // Sidebar items:
         [
@@ -275,12 +279,14 @@ return [
                 [
                     'text' => 'Inicio',
                     'url' =>  '/alumnos',
-                    'icon' => 'fas fa-fw fa-circle'
+                    'icon' => 'fas 	far fa-circle',
+                    'icon_color' => 'blue'
                 ],
                 [
                     'text' => 'Nuevo',
                     'url' =>  '/alumnos/crear',
-                    'icon' => 'fas fa-fw fa-plus'
+                    'icon' => 'fas 	far fa-circle',
+                    'icon_color' => 'blue'
                 ]
 
             ],
@@ -295,6 +301,15 @@ return [
             'text'    => 'Usuarios',
             'url'  => '/usuarios',
             'icon'    => 'fas fa-fw fas fa-theater-masks',
+        ],
+        [
+            'header' => 'CONTROL ESCOLAR',
+        ],
+        [
+            'text'       => 'Inscripción',
+            'icon'       => 'fas fa-fw fa-file',
+            'icon_color' => 'red',
+            'route'        => 'personal.index',
         ],
 
         ['header' => 'MAESTROS'],
@@ -387,7 +402,7 @@ return [
             ],
         ],
         'Sweetalert2' => [
-            'active' => true,
+            'active' => false,
             'files' => [
                 [
                     'type' => 'js',

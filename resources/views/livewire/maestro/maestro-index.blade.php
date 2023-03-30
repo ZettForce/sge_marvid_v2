@@ -6,7 +6,7 @@
 
         <div class="small-box bg-info">
             <div class="inner">
-                <h3>Calificaciones</h3>
+                <h3 style="text-align: center" >Calificaciones</h3>
             </div>
             <div class="icon">
                 <i class="fas fas fa-shapes"></i>

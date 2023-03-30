@@ -15,7 +15,7 @@ class CicloIndex extends Component
 
     public function render()
     {
-        $ciclos = Ciclo::orderBy('clave','desc');
+        $ciclos = Ciclo::orderBy('clave','asc');
         $ciclos = ($this->cargando == true) ? Ciclo::where('clave', 'LIKE', '%' .$this->search . '%')
         ->paginate(10) : [];
 

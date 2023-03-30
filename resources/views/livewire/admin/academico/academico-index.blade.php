@@ -1,7 +1,19 @@
 <div>
-    <div>
-        <h3>Academico</h3>
-    </div>
+    @section('content_header')
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1>Academico</h1>
+                </div>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="{{route('index.home')}}">Inico</a></li>
+                        <li class="breadcrumb-item active">Academico</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    @stop
     <div class="row">
         <div class="col-lg-3 col-6">
 
@@ -12,7 +24,8 @@
                 <div class="icon">
                     <i class="fas fas fa-shapes"></i>
                 </div>
-                <a href="{{route('ciclo.index')}}" class="small-box-footer">Ver más <i class="fas fa-arrow-circle-right"></i></a>
+                <a href="{{ route('ciclo.index') }}" title="Crear, Editar Ciclos" class="small-box-footer">Ver más <i
+                        class="fas fa-arrow-circle-right"></i></a>
             </div>
         </div>
 
@@ -25,7 +38,8 @@
                 <div class="icon">
                     <i class="fas fa-book-open"></i>
                 </div>
-                <a href="{{route('asignatura.index')}}" class="small-box-footer">Ver más <i class="fas fa-arrow-circle-right"></i></a>
+                <a href="{{ route('asignatura.index') }}" title="Crear, Editar Asignaturas" class="small-box-footer">Ver más <i
+                        class="fas fa-arrow-circle-right"></i></a>
             </div>
         </div>
 
@@ -38,7 +52,8 @@
                 <div class="icon">
                     <i class="fas fa-chalkboard-teacher"></i>
                 </div>
-                <a href="{{route('academico.grupo.index')}}" class="small-box-footer">Ver más <i class="fas fa-arrow-circle-right"></i></a>
+                <a href="{{ route('academico.grupo.index') }}" title="Crear, Editar Grupos" class="small-box-footer">Ver más <i
+                        class="fas fa-arrow-circle-right"></i></a>
             </div>
         </div>
         <div class="col-lg-3 col-6">
@@ -50,7 +65,19 @@
                 <div class="icon">
                     <i class="fas fa-apple-alt"></i>
                 </div>
-                <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                <a href="{{route('estudios.index')}}" title="Crear, Editar Plan de Estudios" class="small-box-footer ">Ver más <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-6">
+
+            <div class="small-box bg-primary">
+                <div class="inner">
+                    <h3>Clases</h3>
+                </div>
+                <div class="icon">
+                    <i class="fas fa-microscope"></i>
+                </div>
+                <a href="#" title="Asignar Clases a Maestros" class="small-box-footer">Ver más <i class="fas fa-arrow-circle-right"></i></a>
             </div>
         </div>
 

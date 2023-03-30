@@ -1,17 +1,43 @@
+@section('content_header')
+<div class="container-fluid">
+    <div class="row mb-2">
+        <div class="col-sm-6">
+            <h1>Alumnos</h1>
+        </div>
+        <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+                <li class="breadcrumb-item"><a href="{{route('index.home')}}">Inico</a></li>
+                <li class="breadcrumb-item"><a href="{{route('alumnos.index')}}">Alumnos</a></li>
+                <li class="breadcrumb-item active">Mostrar</li>
+            </ol>
+        </div>
+    </div>
+</div>
+@stop
 <div>
-
     <div class="container mt-5">
-        <div class="card-header">
-            <h3 class="card-title">
-                <i class="fa-solid fa-universal-access"></i>
-                Acciones:
+        <div class="card card-danger card-outline">
+            <div class="card-header">
+                <h3 class="card-title">
+                    <label><i class="fa-solid fa-universal-access"></i> Acciones:</label>
             </h3>
+            </div>
+            <div class="card-body">
+                <button type="button" class="btn btn-primary toastsDefaultDefault">
+                    Constancia <i class="fas fa-file-alt"></i>
+                    </button>
+                    <button type="button" class="btn btn-primary toastsDefaultDefault">
+                    Inscribir <i class="fas fa-pen-alt"></i>
+                    </button>
+                    {{-- <button type="button" class="btn btn-primary toastsDefaultDefault">
+                    Launch Full Toast
+                    </button> --}}
+            </div>
         </div>
         <div class="row">
             <div class="col-sm-4">
                 <h3>{{ $alumno->matricula }}</h3>
-                {{-- <h6>{{$alumno->apellidoPaterno}} {{$alumno->apellidoMaterno}}</h6> --}}
-                <div class="fakeimg"><img class="card-img-top" {{-- width="80px" height="220px" --}}
+                <div class="fakeimg"><img class="card-img-top"
                         src="{{ Storage::disk('public')->url($alumno->foto ? $alumno->foto : 'images/otros/alumnos/defaultStudent.png') }}"
                         alt="Card image cap"></div>
                 <p>Aqui va el boton para cambiar imagen</p>
@@ -20,20 +46,27 @@
             <div class="col-sm-8">
                 <h2>{{ $alumno->primerNombre }} {{ $alumno->segundoNombre }} {{ $alumno->apellidoPaterno }}
                     {{ $alumno->apellidoMaterno }}</h2>
-                <label>Fecha de nacimiento: </label><h6>{{$alumno->f_nacimiento}}</h6>
-                <label>Nacionalidad: </label><h6>{{$alumno->nacionalidad}}</h6>
-                <label>Sexo: </label><h6>{{$alumno->sexo}}</h6>
-                <label>CURP: </label><h6>{{$alumno->curp}}</h6>
-                <label>Domicilio: </label><h6>{{$alumno->domicilio}}, Col. {{$alumno->colonia}}, C.P {{$alumno->zip}}</h6>
-                <label>Teléfono Celular: </label><h6>{{$alumno->t_celular}}</h6>
-                <label>Teléfono Casa: </label><h6>{{$alumno->t_casa}}</h6>
+                <label>Fecha de nacimiento: </label>
+                <h6>{{ $alumno->f_nacimiento }}</h6>
+                <label>Nacionalidad: </label>
+                <h6>{{ $alumno->nacionalidad }}</h6>
+                <label>Sexo: </label>
+                <h6>{{ $alumno->sexo }}</h6>
+                <label>CURP: </label>
+                <h6>{{ $alumno->curp }}</h6>
+                <label>Domicilio: </label>
+                <h6>{{ $alumno->domicilio }}, Col. {{ $alumno->colonia }}, C.P {{ $alumno->zip }}</h6>
+                <label>Teléfono Celular: </label>
+                <h6>{{ $alumno->t_celular }}</h6>
+                <label>Teléfono Casa: </label>
+                <h6>{{ $alumno->t_casa }}</h6>
 
 
 
             </div>
         </div>
     </div>
-    <div class="card card-primary card-outline">
+    <div class="card card-danger card-outline">
         <div class="card-header">
             <h3 class="card-title">
                 <i class="fas fa-edit"></i>
@@ -46,16 +79,17 @@
                     <div class="nav flex-column nav-tabs h-100" id="vert-tabs-tab" role="tablist"
                         aria-orientation="vertical">
                         <a class="nav-link active" id="vert-tabs-home-tab" data-toggle="pill" href="#vert-tabs-home"
-                            role="tab" aria-controls="vert-tabs-home" aria-selected="true"><i class="fa-solid fa-stethoscope"></i> Información Medica</a>
-                        <a class="nav-link" id="vert-tabs-profile-tab" data-toggle="pill"
-                            href="#vert-tabs-profile" role="tab" aria-controls="vert-tabs-profile"
-                            aria-selected="false"><i class="fa-solid fa-address-book"></i> Datos del Tutor</a>
-                        <a class="nav-link" id="vert-tabs-messages-tab" data-toggle="pill"
-                            href="#vert-tabs-messages" role="tab" aria-controls="vert-tabs-messages"
-                            aria-selected="false"><i class="fa-solid fa-clipboard-check"></i> Documentos Entregados</a>
-                        <a class="nav-link" id="vert-tabs-settings-tab" data-toggle="pill"
-                            href="#vert-tabs-settings" role="tab" aria-controls="vert-tabs-settings"
-                            aria-selected="false"><i class="fa-solid fa-book-open-reader"></i> Control Escolar</a>
+                            role="tab" aria-controls="vert-tabs-home"><i class="fa-solid fa-stethoscope"></i>
+                            Información Medica</a>
+                        <a class="nav-link" id="vert-tabs-profile-tab" data-toggle="pill" href="#vert-tabs-profile"
+                            role="tab" aria-controls="vert-tabs-profile"><i class="fa-solid fa-address-book"></i>
+                            Datos del Tutor</a>
+                        <a class="nav-link" id="vert-tabs-messages-tab" data-toggle="pill" href="#vert-tabs-messages"
+                            role="tab" aria-controls="vert-tabs-messages"><i
+                                class="fa-solid fa-clipboard-check"></i> Documentos Entregados</a>
+                        <a class="nav-link" id="vert-tabs-settings-tab" data-toggle="pill" href="#vert-tabs-settings"
+                            role="tab" aria-controls="vert-tabs-settings"><i
+                                class="fa-solid fa-book-open-reader"></i> Control Escolar</a>
                     </div>
                 </div>
                 <div class="col-7 col-sm-9">

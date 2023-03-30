@@ -1,7 +1,22 @@
+@section('content_header')
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1>Ciclo</h1>
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a href="{{ route('index.home') }}">Inico</a></li>
+                    <li class="breadcrumb-item"><a href="{{ route('academico.index') }}">Academico</a></li>
+                    <li class="breadcrumb-item active">Ciclo</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+@stop
 <div wire:init="cargando">
-    <h4>Index Ciclos</h4>
-    <a type="button" {{-- href="{{ route('alumnos.crear') }}" --}} class="float-right mb-3 btn btn-success">Agregar <i class="fa fa-plus"
-            aria-hidden="true"></i></a>
+    <a type="button" href="{{ route('ciclo.crear') }}" title="Crear un nuevo ciclo escolar"
+        class="float-right mb-3 btn btn-success">Agregar Ciclo <i class="fa fa-plus" aria-hidden="true"></i></a>
 
     <div class="mb-2 col-6">
         <div class="input-group flex-nowrap">
@@ -18,7 +33,7 @@
                 <tr>
                     <th>Clave</th>
                     <th>Descripción</th>
-                    <th with="10px" >Acciones</th>
+                    <th width="110">Acciones</th>
                 </tr>
             </thead>
             <tbody>
@@ -29,10 +44,10 @@
                         <td> {{ $ciclo->descripcion }}</td>
 
                         <td>
-                            <a {{-- href="{{ route('alumnos.mostrar', $alumno) }}" --}} title="Ver más" class="btn btn-info btn-sm"><i class="fa fa-eye"
-                                    aria-hidden="true"></i></a>
-                            <a {{-- href="{{ route('editar.alumnos', $alumno) }}" --}} title="Editar" class="btn btn-primary btn-sm"><i
+                            <a href="{{ route('ciclo.editar', $ciclo) }}" title="Editar" class="btn btn-primary btn-sm"><i
                                     class="fa fa-pencil" aria-hidden="true"></i></i></a>
+                            <a href="{{ route('ciclo.borrar', $ciclo) }}" title="Eliminar"
+                                class="btn btn-danger btn-sm"><i class="fa fa-trash" aria-hidden="true"></i></a>
                         </td>
                     </tr>
                 @endforeach
@@ -43,10 +58,6 @@
         <img class="mx-auto d-block" style="width: 250px; height: 250px"
             src="{{ Storage::disk('public')->url('images/otros/cargando.gif') }}" alt="cargando">
     @endif
-
-
-
-
 
     {{ $cargando == true ? $ciclos->links() : null }}
 </div>

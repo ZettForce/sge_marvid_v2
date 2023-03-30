@@ -9,9 +9,8 @@
             </div>
             <div class="card-footer text-muted">
                 <button wire:loading.attr="disabled" class="btn btn-primary btn-sm">Actualizar <i
-                        class="fa fa-pencil" aria-hidden="true"></i></button>
-                <a {{-- href="{{ route('alumnos.index') }}" --}} class="btn btn-danger btn-sm">Cancelar <i class="fa fa-ban"
-                        aria-hidden="true"></i></a>
+                        class="fa fa-pencil"></i></button>
+                <a {{-- href="{{ route('alumnos.index') }}" --}} class="btn btn-danger btn-sm">Cancelar <i class="fa fa-ban"></i></a>
             </div>
         </div>
     </form>

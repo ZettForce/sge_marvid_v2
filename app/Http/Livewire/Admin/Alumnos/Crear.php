@@ -27,9 +27,8 @@ class Crear extends Component
     public function crear()
     {
         $this->validate();
-
         $this->alumno->save();
-
+        $this->emit('alerta');
         return redirect(route('alumnos.index'));
 
 

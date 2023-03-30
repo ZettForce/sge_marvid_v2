@@ -17,7 +17,6 @@ return new class extends Migration
             $table->id();
             $table->string('clave');
             $table->string('descripcion');
-            $table->string('etiqueta');
             $table->date('inicia')->nullable();
             $table->date('termina')->nullable();
             $table->timestamps();

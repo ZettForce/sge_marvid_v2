@@ -4,10 +4,12 @@ class RulesGrupos{
     public static function Reglas($id = null)
     {
         return[
-            'grupo.clave' => 'nullable|string',
-            'grupo.descripcion' => 'nullable|string',
-            'grupo.identificador' => 'nullable|string',
-            'grupo.turno' => 'string'
+            'grupo.clave' => 'required|string',
+            'grupo.descripcion' => 'required|string',
+            'grupo.identificador' => 'required|string',
+            'grupo.turno' => 'string|required',
+            'grupo.grado_id' => 'string|required',
+            'grupo.ciclo_id' => 'string|required'
 
 
         ];

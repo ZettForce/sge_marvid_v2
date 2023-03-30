@@ -16,9 +16,9 @@ class UsuariosIndex extends Component
     public function render()
     {
 
-        $usuarios = User::orderBy('name', 'desc');
+        $usuarios = User::orderBy('email', 'desc');
         $usuarios = ($this->cargando == true) ? User::where('email', 'LIKE', '%' . $this->search . '%')
-            ->orwhere('name', 'LIKE', '%' . $this->search . '%')
+            ->orwhere('email', 'LIKE', '%' . $this->search . '%')
             ->paginate(10) : [];
 
 

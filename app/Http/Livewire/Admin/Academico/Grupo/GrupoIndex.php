@@ -2,6 +2,8 @@
 
 namespace App\Http\Livewire\Admin\Academico\Grupo;
 
+use App\Models\Ciclo;
+use App\Models\Grado;
 use App\Models\Grupo;
 use Livewire\Component;
 use Livewire\WithPagination;
@@ -16,10 +18,12 @@ class GrupoIndex extends Component
 
     public function render()
     {
-        $grupos = Grupo::orderBy('clave','desc');
-        $grupos = ($this->cargando == true) ? Grupo::where('clave', 'LIKE', '%' . $this->search . '%')
-        ->paginate(10):[];
-        return view('livewire.admin.academico.grupo.grupo-index', compact('grupos'));
+        $grados = Grado::find('ciclo_id');
+        $ciclos = Ciclo::all();
+        /* $grupos = Grupo::orderBy('ciclo_id','desc'); */
+        $grupos = ($this->cargando == true) ? Grupo:: where('ciclo_id',/* , 'LIKE', '%' . */ $this->search/*  . '%' */)
+        ->paginate(15):[];
+        return view('livewire.admin.academico.grupo.grupo-index', compact('grupos','ciclos','grados'));
     }
     public function cargando()
     {

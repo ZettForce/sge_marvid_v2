@@ -19,12 +19,6 @@ return new class extends Migration
             $table->string('descripcion')->nullable();
             $table->string('identificador')->nullable();
             $table->string('turno');
-
-
-
-
-
-
             $table->timestamps();
         });
     }

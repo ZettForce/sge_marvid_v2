@@ -15,13 +15,8 @@ return new class extends Migration
     {
         Schema::create('asignaturas', function (Blueprint $table) {
             $table->id();
-            $table->string('clave')->nullable();
+            $table->string('clave');
             $table->string('descripcion');
-
-            $table->unsignedBigInteger('maestro_id');
-
-            $table->foreign('maestro_id')->references('id')->on('maestros');
-
 
 
             $table->timestamps();
