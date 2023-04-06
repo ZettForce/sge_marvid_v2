@@ -9,7 +9,7 @@
                 @include('livewire.admin.usuarios.formulario')
             </div>
             <div class="card-footer text-muted">
-                <button wire:loading.attr="disabled" wire:target="foto" class="btn btn-success btn-sm">Agregar <i
+                <button wire:loading.attr="disabled" wire:target="picture" class="btn btn-success btn-sm">Agregar <i
                         class="fa fa-save"></i></button>
                 <a href="{{ route('usuarios.index') }}" class="btn btn-danger btn-sm">Cancelar <i class="fa fa-ban"></i></a>
             </div>
