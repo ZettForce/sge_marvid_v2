@@ -13,7 +13,7 @@ class Crear extends Component
 {
     use WithFileUploads;
     public Alumno $alumno;
-    public $foto;
+    public $pictureStudent;
 
     public function mount()
     {
@@ -27,6 +27,9 @@ class Crear extends Component
     public function crear()
     {
         $this->validate();
+        if ($this->pictureStudent != null) {
+            $this->alumno->pictureStudent = Storage::disk('public')->put('images/alumnos', $this->pictureStudent);
+        }
         $this->alumno->save();
         $this->emit('alerta');
         return redirect(route('alumnos.index'));

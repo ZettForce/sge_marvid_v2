@@ -21,7 +21,8 @@
                 Datos del Alumno
             </div>
             <div class="card-body">
-                @include('livewire.admin.alumnos.formulario')
+                    @include('livewire.admin.alumnos.formulario')
+
             </div>
             <div class="card-footer text-muted">
                 <button class="btn btn-success btn-sm">Agregar <i class="fa fa-save"></i></button>
@@ -29,6 +30,5 @@
                         aria-hidden="true"></i></a>
             </div>
         </div>
-
     </form>
 </div>

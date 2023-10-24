@@ -64,15 +64,11 @@
 
         </tbody>
     </table>
-
 @else
      <img class="mx-auto d-block" style="width: 250px; height: 250px"
         src="{{ Storage::disk('public')->url('images/otros/cargando.gif') }}" alt="cargando">
 @endif
-
-
-
-
-
     {{ $cargando == true ? $alumnos->links() : null }}
+
 </div>
+

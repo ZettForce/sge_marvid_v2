@@ -35,6 +35,7 @@ class RulesAlumnos{
             'alumno.direccion' => 'required|string',
             'alumno.tutor_tel_trabajo' => 'nullable|string',
             'alumno.tutor_tel_celular' => 'required|string',
+            'pictureStudent' => 'nullable|image'
 
 
         ];

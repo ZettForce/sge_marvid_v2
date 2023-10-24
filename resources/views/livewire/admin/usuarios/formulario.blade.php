@@ -5,7 +5,7 @@
         <strong>Cargando...</strong>
         <div class="spinner-border ml-auto" role="status" aria-hidden="true"></div>
     </div>
-    <div class="col-4">
+    <div class="col-4 mx-auto">
         @if ($picture != null)
             <img style="width: 230px;height:230px" src="{{ $picture->temporaryUrl() }}" alt="">
         @else
