@@ -15,10 +15,10 @@ class MaestrosIndex extends Component
     public function render()
     {
         $maestros = Maestro::orderBy('id','desc');
-        $maestros = ($this->cargando == true) ? Maestro::where('segundoNombre', 'LIKE', '%' .$this->search .'%')
+        $maestros = ($this->cargando == true) ? Maestro::where('primerNombre', 'LIKE', '%' .$this->search .'%')
         ->orwhere ('apellidoPaterno', 'LIKE', '%' .$this->search .'%')
         ->orwhere ('apellidoMaterno', 'LIKE', '%' .$this->search .'%')
-        ->orwhere ('primerNombre', 'LIKE', '%' .$this->search .'%')
+        /* ->orwhere ('segundoNombre', 'LIKE', '%' .$this->search .'%') */
         ->paginate(10) : [];
         return view('livewire.admin.maestros.maestros-index', compact('maestros'));
     }

@@ -254,10 +254,10 @@ return [
             'icon'        => 'far fa-fw fas fa-home',
         ],
         [
-            'header' => 'ADMINISTRADOR',
+            'header' => 'ACADEMIA',
         ],
         [
-            'text' => 'Academico',
+            'text' => 'Académico',
             'url'  => '/academico',
             'icon' => 'fas fa-fw fa-book',
             'icon_color' => 'red',
@@ -301,6 +301,11 @@ return [
             'text'    => 'Usuarios',
             'url'  => '/usuarios',
             'icon'    => 'fas fa-fw fas fa-theater-masks',
+        ],
+        [
+            'text'       => 'Configuración',
+            'icon'       => 'fas fa-cogs',
+            'route'        => 'personal.index',
         ],
         [
             'header' => 'CONTROL ESCOLAR',

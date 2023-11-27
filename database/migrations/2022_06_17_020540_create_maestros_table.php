@@ -15,10 +15,11 @@ return new class extends Migration
     {
         Schema::create('maestros', function (Blueprint $table) {
             $table->id();
-            $table->string('primerNombre');
-            $table->string('segundoNombre')->nullable();
+            $table->string('primerNombre');/*
+            $table->string('segundoNombre')->nullable(); */
             $table->string('apellidoPaterno');
             $table->string('apellidoMaterno')->nullable();
+            $table->string('picture')->nullable();
             $table->date('f_nacimiento');
             $table->string('sexo');
             $table->string('curp');

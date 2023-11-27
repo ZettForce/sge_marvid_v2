@@ -23,7 +23,7 @@ class User extends Authenticatable
         return 'Perfil';
     }
     public function adminlte_image(){
-        return 'https://picsum.photos/300/300';
+        return asset('storage/'.$this->profile_photo_path);
     }
     use HasApiTokens, HasFactory, Notifiable, HasRoles;
 

@@ -8,9 +8,13 @@ use Livewire\Component;
 class Mostrar extends Component
 {
     public Alumno $alumno;
-    public $foto;
+    public $pictureStudent;
+
+
+
     public function render()
     {
         return view('livewire.admin.alumnos.mostrar');
     }
+
 }

@@ -1,20 +1,45 @@
 <div>
     <form class="bg-img">
+        <div wire:loading wire:target="pictureTeacher" class="align-items-center">
+            <strong>Cargando...</strong>
+            <div class="spinner-border ml-auto" role="status" aria-hidden="true"></div>
+        </div>
         <div class="form-row">
+            <div class="col-2">
+                @if ($pictureTeacher != null)
+                    <img style="width: 180px;height:240px" src="{{ $pictureTeacher->temporaryUrl() }}" alt="">
+                @else
+                    <img style="width: 180px; height:240px;"
+                        src="{{ Storage::disk('public')->url($maestro->pictureTeacher != null ? $maestro->pictureTeacher : 'images/maestros/default.png') }}"
+                        alt="No picture">
+                @endif
+
+                <form>
+                    <div class="form-group">
+                        <label for="exampleFormControlFile1">Subir imagen</label>
+                        <input wire:model="pictureTeacher" type="file" class="form-control-file"
+                            id="exampleFormControlFile1">
+                        @error('pictureTeacher')
+                            <span class="text-danger">{{ $message }}</span>
+                        @enderror
+                    </div>
+                </form>
+
+            </div>
             <div class="form-group col-md-3">
-                <label>Primer Nombre *</label>
+                <label>Nombre *</label>
                 <input wire:model.defer="maestro.primerNombre" onkeyup="this.value = this.value.toUpperCase();" type="text" class="form-control" placeholder="Jesus">
                 @error('maestro.primerNombre')
                     <span class="text-danger">{{ $message }}</span>
                 @enderror
             </div>
-            <div class="form-group col-md-3">
+            {{-- <div class="form-group col-md-3">
                 <label>Segundo Nombre</label>
                 <input wire:model.defer="maestro.segundoNombre" onkeyup="this.value = this.value.toUpperCase();" type="text" class="form-control" placeholder="Antonio">
                 @error('maestro.segundoNombre')
                     <span class="text-danger">{{ $message }}</span>
                 @enderror
-            </div>
+            </div> --}}
             <div class="form-group col-md-3">
                 <label>Apellido Paterno *</label>
                 <input wire:model.defer="maestro.apellidoPaterno" onkeyup="this.value = this.value.toUpperCase();" type="text" class="form-control"

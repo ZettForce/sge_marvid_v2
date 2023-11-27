@@ -38,19 +38,20 @@
             </div>
         </div>
         <div class="row">
-            {{-- <div class="col-4">
-                @if ($picture != null)
-                    <img style="width: 230px;height:230px" src="{{ $picture->temporaryUrl() }}" alt="">
-                @else
-                    <img style="width: 230px; height: 230px;"
-                        src="{{ Storage::disk('public')->url($usuario->picture != null ? $agregar->picture : 'images/alumnos/default.png') }}"
-                        alt="No picture">
-                @endif
-            </div> --}}
             <div class="col-sm-12">
                 <h2>{{ $alumno->primerNombre }} {{ $alumno->segundoNombre }} {{ $alumno->apellidoPaterno }}
                     {{ $alumno->apellidoMaterno }} | {{ $alumno->matricula }}</h2>
             </div>
+             <div class="col-4">
+                @if ($pictureStudent != null)
+                    <img style="width: 130px;height:130px" src="{{ $pictureStudent->temporaryUrl() }}" alt="">
+                @else
+                    <img style="width: 130px; height: 130px;"
+                        src="{{ Storage::disk('public')->url($alumno->pictureStudent != null ? $alumno->pictureStudent : 'images/alumnos/default.png') }}"
+                        alt="No picture">
+                @endif
+            </div>
+
             <div class="card-body">
                 <div class="col-12">
                     <div class="row">

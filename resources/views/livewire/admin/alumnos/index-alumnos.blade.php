@@ -32,6 +32,7 @@
     <table class="table table-striped">
         <thead>
             <tr>
+                <th>Foto</th>
                 <th>Matricula</th>
                 <th>Nombre del alumno</th>
                 <th>Domicilio</th>
@@ -42,6 +43,7 @@
         <tbody>
             @foreach ($alumnos as $alumno)
                 <tr>
+                    <td>{{$alumno->pictureStudent}}</td>
                     <td> {{ $alumno->matricula }}</td>
                     <td>
                      {{ $alumno->apellidoPaterno }}

@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('costosColegiatura')->nullable();
             $table->string('ciclo')->nullable();
             /*  Datos del alumno */
-            $table->string('picture')->nullable();
+            $table->string('pictureStudent')->nullable();
             $table->string('primerNombre');
             $table->string('segundoNombre')->nullable();
             $table->string('apellidoPaterno');

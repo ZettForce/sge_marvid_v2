@@ -14,6 +14,8 @@ class Crear extends Component
     use WithFileUploads;
     public Alumno $alumno;
     public $pictureStudent;
+    public $fechaNacimiento;
+    public $edad;
 
     public function mount()
     {

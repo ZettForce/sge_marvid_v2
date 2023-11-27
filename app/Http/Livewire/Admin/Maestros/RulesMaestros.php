@@ -8,7 +8,7 @@ class RulesMaestros
     {
         return [
             'maestro.primerNombre' => 'required|string',
-            'maestro.segundoNombre' => 'string|nullable',
+            /* 'maestro.segundoNombre' => 'string|nullable', */
             'maestro.apellidoPaterno' => 'string|required',
             'maestro.apellidoMaterno' => 'string|nullable',
             'maestro.f_nacimiento' => 'date|required',
@@ -27,7 +27,8 @@ class RulesMaestros
             'maestro.nombreMadre' => 'string|nullable',
             'maestro.direccion' => 'string|nullable',
             'maestro.tel_trabajo' => 'string|nullable',
-            'maestro.tel_celular' => 'string|nullable'
+            'maestro.tel_celular' => 'string|nullable',
+            'pictureTeacher' => 'nullable|image'
         ];
     }
 }
